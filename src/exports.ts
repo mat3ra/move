@@ -7,4 +7,6 @@ export { default as MethodData } from "./components/MethodData";
 export { default as FixedRJSForm } from "./components/FixedRJSForm";
 export { default as BrillouinZoneImage } from "./components/BrillouinZoneImage";
 export { PseudoPanel, PseudoSearchBar } from "./components/pseudopotential/PseudoPanel";
-
+export { PseudoForm } from "./components/pseudopotential/PseudoForm";
+export { computePseudosListData } from "./utils/pseudopotentials";
+export type { PseudoListData } from "./utils/pseudopotentials";

@@ -19,6 +19,15 @@
         "noImplicitThis": false,
         "alwaysStrict": false,
         "paths": {
+            "@exabyte-io/cove.js/dist/mui-composed/components/loading/LoadingIndicator": [
+                "src/stubs/cove-loading-indicator.d.ts"
+            ],
+            "@mat3ra/prode": [
+                "node_modules/@mat3ra/prode/dist/js/index"
+            ],
+            "@mat3ra/prode/*": [
+                "node_modules/@mat3ra/prode/dist/js/*"
+            ],
             "@mat3ra/wode": [
                 "node_modules/@mat3ra/wode"
             ],

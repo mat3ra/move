@@ -417,4 +417,8 @@ declare module "@mat3ra/prove" {
     export const ResultsView: any;
 }
 
+declare module "@exabyte-io/cove.js/dist/mui-composed/components/loading/LoadingIndicator" {
+    export const LoadingIndicator: any;
+}
+
 export {};

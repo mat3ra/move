@@ -38,6 +38,7 @@ console.log("MOVE standalone: mounting React app, schemas registered:", esseSche
 // --- Helpers ---
 
 /** Map our local pseudo dataset to PseudopotentialMetaProperty[] for a given element */
+// TODO: use pseudo json from standata via metaProperty instead of local json file
 function getPseudosForElement(element: string, appName = "espresso"): any[] {
     return (pseudoDataset as any[]).filter(
         (p) => p.element === element && p.apps && p.apps.includes(appName)
@@ -77,7 +78,7 @@ function App() {
     const modelStandata = useMemo(() => new ModelStandata(), []);
     const allModels = useMemo(() => (modelStandata as any).getAll?.() ?? [], [modelStandata]);
     const defaultApplication = useMemo(() => {
-        const apps = registry.getAll?.() ?? [];
+        const apps = (registry as any).getAll?.() ?? [];
         return apps[0] ?? { name: "espresso", version: "7.2", build: "Default" };
     }, []);
     const [model, setModel] = useState(() =>
