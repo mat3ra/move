@@ -3,8 +3,6 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 
-const stubsDir = path.resolve(__dirname, "src/standalone/stubs");
-
 /**
  * Vite config for the move standalone demo app.
  * This is ONLY used for local development (`npm run dev`).
@@ -34,33 +32,6 @@ export default defineConfig({
             {
                 find: /^vite-plugin-node-polyfills\/shims\/(.*)$/,
                 replacement: path.resolve(__dirname, "node_modules/vite-plugin-node-polyfills/shims/$1"),
-            },
-            // Stub Meteor/webapp-specific imports
-            {
-                find: /^\/imports\/client\/components\/molecules\/ElementAvatar/,
-                replacement: path.resolve(stubsDir, "ElementAvatar.tsx"),
-            },
-            {
-                find: /^\/imports\/client\/components\/organisms\/dialogs\/InfoPopoverWithDocumentationDialog/,
-                replacement: path.resolve(stubsDir, "InfoPopoverWithDocumentationDialog.tsx"),
-            },
-            {
-                find: /^\/imports\/app_settings\/settings/,
-                replacement: path.resolve(stubsDir, "appSettingsClient.ts"),
-            },
-            // Stub Meteor-only paths
-            {
-                find: /^\/imports\/(.*)$/,
-                replacement: path.resolve(stubsDir, "meteor.js"),
-            },
-            {
-                find: /^meteor\/(.*)$/,
-                replacement: path.resolve(stubsDir, "meteor.js"),
-            },
-            // Stub moment-duration-format (side-effect-only import in ive)
-            {
-                find: "moment-duration-format",
-                replacement: path.resolve(stubsDir, "moment-duration-format.js"),
             },
             // Redirect local source packages to their src/ for live editing
             {
