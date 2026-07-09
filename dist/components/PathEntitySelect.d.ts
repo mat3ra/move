@@ -12,4 +12,3 @@ interface Props<Entity extends PathEntity> {
 }
 declare function PathEntitySelect<Entity extends PathEntity>({ options, selected, placeholder, disabled, onChange, descriptionFn, title, idPrefix, }: Props<Entity>): React.JSX.Element;
 export default PathEntitySelect;
-//# sourceMappingURL=PathEntitySelect.d.ts.map

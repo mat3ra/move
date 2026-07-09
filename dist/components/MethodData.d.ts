@@ -21,4 +21,3 @@ declare namespace MethodData {
 }
 import React from "react";
 import PropTypes from "prop-types";
-//# sourceMappingURL=MethodData.d.ts.map

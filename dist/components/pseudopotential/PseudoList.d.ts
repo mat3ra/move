@@ -13,4 +13,3 @@ export interface PseudopotentialListProps {
     onButtonClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 export declare function PseudopotentialList({ pseudoData, isActive, onChange, onButtonClick, }: PseudopotentialListProps): React.JSX.Element;
-//# sourceMappingURL=PseudoList.d.ts.map

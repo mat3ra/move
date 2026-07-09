@@ -14,4 +14,3 @@ interface PseudoAutocompleteProps {
 }
 export default function PseudoAutocomplete({ options, onChange, disabled, value, className, }: PseudoAutocompleteProps): React.JSX.Element;
 export {};
-//# sourceMappingURL=PseudoAutocomplete.d.ts.map

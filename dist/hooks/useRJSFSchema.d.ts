@@ -7,4 +7,3 @@ interface Props {
 }
 export declare function useRJSFSchema({ schemaId, customSchemas }: Props): [RJSFSchema, UiSchema];
 export {};
-//# sourceMappingURL=useRJSFSchema.d.ts.map

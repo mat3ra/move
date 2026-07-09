@@ -13,4 +13,3 @@ export declare function PseudoSearchBar({ searchText, onChange, }: {
     searchText?: string;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }): React.JSX.Element;
-//# sourceMappingURL=PseudoPanel.d.ts.map

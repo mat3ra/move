@@ -13,4 +13,3 @@ interface Props {
 }
 declare function Model({ model, models, onUpdate, editable, application, id }: Props): React.JSX.Element;
 export default Model;
-//# sourceMappingURL=Model.d.ts.map

@@ -20,4 +20,3 @@ export interface PseudoUploadDialogProps {
 }
 declare function PseudoUploadDialog({ id, title, onClose, onSubmit, isSubmitButtonProcessing, elements, isElementSelectEnabled, }: PseudoUploadDialogProps): React.JSX.Element;
 export default PseudoUploadDialog;
-//# sourceMappingURL=PseudoUploadDialog.d.ts.map

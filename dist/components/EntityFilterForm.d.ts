@@ -9,4 +9,3 @@ interface Props<FormData extends GenericObjectType> {
 }
 declare function EntityFilterForm<FormData extends GenericObjectType>(props: Props<FormData>): React.JSX.Element;
 export default EntityFilterForm;
-//# sourceMappingURL=EntityFilterForm.d.ts.map

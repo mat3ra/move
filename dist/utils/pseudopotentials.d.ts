@@ -14,4 +14,3 @@ export type PseudoListData = PseudoData[];
  * outside of React (e.g., in a server action or a pure test).
  */
 export declare function computePseudosListData(metaProperties: MetaPropertyHolderMixin[], subworkflow: Subworkflow, uniqueElements: string[], searchText: string): PseudoListData;
-//# sourceMappingURL=pseudopotentials.d.ts.map

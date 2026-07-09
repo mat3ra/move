@@ -11,4 +11,3 @@ interface Props {
 }
 declare function Method({ method, methods, onUpdate, editable, id }: Props): React.JSX.Element;
 export default Method;
-//# sourceMappingURL=Method.d.ts.map

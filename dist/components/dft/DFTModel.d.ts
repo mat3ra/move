@@ -15,4 +15,3 @@ declare class DFTModel {
     }): React.JSX.Element[];
 }
 import React from "react";
-//# sourceMappingURL=DFTModel.d.ts.map

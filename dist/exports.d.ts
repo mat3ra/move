@@ -10,4 +10,3 @@ export { PseudoPanel, PseudoSearchBar } from "./components/pseudopotential/Pseud
 export { PseudoForm } from "./components/pseudopotential/PseudoForm";
 export { computePseudosListData } from "./utils/pseudopotentials";
 export type { PseudoListData } from "./utils/pseudopotentials";
-//# sourceMappingURL=exports.d.ts.map

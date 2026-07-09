@@ -13,4 +13,3 @@ declare namespace BrillouinZoneImage {
 }
 import React from "react";
 import PropTypes from "prop-types";
-//# sourceMappingURL=BrillouinZoneImage.d.ts.map

@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import path from "path";
 import { useEffect, useState } from "react";
 function PseudoOption({ option, ...props }) {
     const theme = useTheme();
@@ -14,7 +13,7 @@ function PseudoOption({ option, ...props }) {
             "&:hover": {
                 backgroundColor: theme.palette.action.hover,
             },
-        }, alignItems: "center", ...props, children: [_jsxs(Stack, { direction: "row", alignItems: "center", spacing: 1, children: [_jsx(Typography, { variant: "subtitle1", noWrap: true, className: "option-title", children: path.basename(option.path) }), _jsx(Typography, { variant: "subtitle2", noWrap: true, className: "option-path", justifySelf: "flex-start", children: option.path })] }), _jsx(Typography, { variant: "caption", noWrap: true, children: option.isCustom ? ownerText : "default" })] }));
+        }, alignItems: "center", ...props, children: [_jsxs(Stack, { direction: "row", alignItems: "center", spacing: 1, children: [_jsx(Typography, { variant: "subtitle1", noWrap: true, className: "option-title", children: option.path.split("/").pop() }), _jsx(Typography, { variant: "subtitle2", noWrap: true, className: "option-path", justifySelf: "flex-start", children: option.path })] }), _jsx(Typography, { variant: "caption", noWrap: true, children: option.isCustom ? ownerText : "default" })] }));
 }
 export default function PseudoAutocomplete({ options, onChange, disabled, value, className, }) {
     const [selected, setSelected] = useState(value);

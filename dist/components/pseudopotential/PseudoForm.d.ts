@@ -16,4 +16,3 @@ interface PseudoFormProps {
 }
 export declare function PseudoForm({ pseudosListData, subworkflow, onUpdate, onUploadClick, isLoading, adjustable, className, }: PseudoFormProps): React.JSX.Element;
 export {};
-//# sourceMappingURL=PseudoForm.d.ts.map

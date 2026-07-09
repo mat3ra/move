@@ -5,4 +5,3 @@ interface CategorizedEntity<Params> {
 }
 export declare function filterByCategoryAndParams<Params>(entity: CategorizedEntity<Params>, filter: Categories & Params): boolean;
 export {};
-//# sourceMappingURL=filter.d.ts.map
