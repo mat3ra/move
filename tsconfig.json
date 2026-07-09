@@ -22,6 +22,9 @@
             "@exabyte-io/cove.js/dist/mui-composed/components/loading/LoadingIndicator": [
                 "src/stubs/cove-loading-indicator.d.ts"
             ],
+            "@exabyte-io/cove.js/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation": [
+                "node_modules/@exabyte-io/cove.js/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation"
+            ],
             "@mat3ra/prode": [
                 "node_modules/@mat3ra/prode/dist/js/index"
             ],
@@ -70,48 +73,6 @@
             "@mat3ra/utils/*": [
                 "node_modules/@mat3ra/utils/*"
             ],
-            "@mat3ra/wove": [
-                "../wove"
-            ],
-            "@mat3ra/wove/*": [
-                "../wove/*"
-            ],
-            "@mat3ra/workflow-designer": [
-                "../workflow-designer"
-            ],
-            "@mat3ra/workflow-designer/*": [
-                "../workflow-designer/*"
-            ],
-            "@mat3ra/ive": [
-                "../ive"
-            ],
-            "@mat3ra/ive/*": [
-                "../ive/*"
-            ],
-            "@mat3ra/ave": [
-                "../ave"
-            ],
-            "@mat3ra/ave/*": [
-                "../ave/*"
-            ],
-            "@mat3ra/move": [
-                "../move"
-            ],
-            "@mat3ra/move/*": [
-                "../move/*"
-            ],
-            "@mat3ra/jove": [
-                "../jove"
-            ],
-            "@mat3ra/jove/*": [
-                "../jove/*"
-            ],
-            "@mat3ra/job-designer": [
-                "../job-designer"
-            ],
-            "@mat3ra/job-designer/*": [
-                "../job-designer/*"
-            ],
             "@mat3ra/*": [
                 "src/typings.d.ts"
             ],
@@ -137,5 +98,8 @@
     },
     "include": [
         "src/**/*"
+    ],
+    "exclude": [
+        "src/standalone/**/*"
     ]
 }

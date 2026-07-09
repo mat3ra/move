@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import React from "react";
 
-import { InfoPopoverWithDocumentationDialog } from "/imports/client/components/organisms/dialogs/InfoPopoverWithDocumentationDialog";
+import InfoPopoverWithDocumentation from "@exabyte-io/cove.js/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation";
 
 export interface MetaProperty {
     owner?: { slug: string };
@@ -29,23 +29,19 @@ export function PseudoPanel({ children }: { children: React.ReactNode }) {
                         Pseudopotentials
                     </Typography>
                     {/* @ts-ignore */}
-                    <InfoPopoverWithDocumentationDialog
+                    <InfoPopoverWithDocumentation
                         popoverTitle="Pseudopotentials"
-                        searchText="Pseudopotential">
-                        We supply pseudopotentials from default sets:
-                        <br />
-                        <a
-                            href="https://www.physics.rutgers.edu/gbrv/"
-                            target="_blank"
-                            rel="noreferrer">
+                    >
+                        We supply pseudopotentials from default sets:{" "}
+                        <a href="https://www.physics.rutgers.edu/gbrv/" target="_blank" rel="noreferrer">
                             gbrv v1.5
-                        </a>
+                        </a>{" "}
                         for espresso, and `v5.*-default` for vasp. You may upload your custom files
                         here during job creation. During workflow design we show <i>Si</i>{" "}
                         pseudopotentials as example. You may type text or comma-separated regular
                         expressions to filter pseudopotentials during job creation. Default pseudo
                         for the element is used if no match found.
-                    </InfoPopoverWithDocumentationDialog>
+                    </InfoPopoverWithDocumentation>
                 </Stack>
             }>
             {children}

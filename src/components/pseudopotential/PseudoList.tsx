@@ -8,7 +8,27 @@ import React from "react";
 
 import PseudoAutocomplete, { type PseudoItem } from "./PseudoAutocomplete";
 
-import { ElementAvatar } from "/imports/client/components/molecules/ElementAvatar";
+// Standalone stub — ElementAvatar shows the element symbol in a small colored chip.
+function ElementAvatar({ element }: { element: string }) {
+    return (
+        <span
+            style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 28,
+                height: 28,
+                borderRadius: "50%",
+                background: "#7c4dff",
+                color: "#fff",
+                fontSize: 11,
+                fontWeight: 700,
+                flexShrink: 0,
+            }}>
+            {element}
+        </span>
+    );
+}
 
 export interface PseudoData {
     value?: string;

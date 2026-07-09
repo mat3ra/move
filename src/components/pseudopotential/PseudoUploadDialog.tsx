@@ -12,7 +12,8 @@ import React, { useEffect, useState } from "react";
 
 import { PseudoSelectSchema } from "../../schemas/pseudo_select";
 
-import { appSettingsClient } from "/imports/app_settings/settings";
+// In standalone mode, appSettingsClient is not available. Provide a safe default.
+const appSettingsClient = () => ({ fileSizeLimit: 50 * 1024 * 1024 }); // 50 MB default
 
 const { getDFTFunctionalsByApproximation } = tree;
 
