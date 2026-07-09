@@ -3,7 +3,6 @@ import Stack, { StackOwnProps } from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import path from "path";
 import React, { useEffect, useState } from "react";
 
 interface PseudoOptionProps
@@ -34,7 +33,7 @@ function PseudoOption({ option, ...props }: PseudoOptionProps) {
             {...props}>
             <Stack direction="row" alignItems="center" spacing={1}>
                 <Typography variant="subtitle1" noWrap className="option-title">
-                    {path.basename(option.path)}
+                    {option.path.split("/").pop()}
                 </Typography>
                 <Typography
                     variant="subtitle2"
