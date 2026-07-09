@@ -84,7 +84,7 @@ function PathEntitySelect<Entity extends PathEntity>({
         }
     }, [selected, paths]);
 
-    const handleChange = (_, value, reason) => {
+    const handleChange = (_: React.SyntheticEvent, value: Entity | null, reason: string) => {
         if (reason === "selectOption" && value) {
             setValue(value);
             onChange(value);

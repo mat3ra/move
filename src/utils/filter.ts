@@ -19,7 +19,7 @@ export function filterByCategoryAndParams<Params>(
     if (!entity.parameters || isEmpty(entity.parameters)) return true;
     // eslint-disable-next-line no-restricted-syntax
     for (const key in params) {
-        if (params[key] && entity.parameters[key] !== params[key]) return false;
+        if ((params as Record<string, any>)[key] && (entity.parameters as Record<string, any>)[key] !== (params as Record<string, any>)[key]) return false;
     }
     return true;
 }

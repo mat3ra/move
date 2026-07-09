@@ -62,7 +62,7 @@ export function PseudopotentialList({
                         key={element}
                         data-tid={element}
                         alignItems="center">
-                        <ElementAvatar element={element} />
+                        <ElementAvatar element={element ?? ""} />
                         <PseudoAutocomplete
                             className="pseudos-input"
                             disabled={!isActive}

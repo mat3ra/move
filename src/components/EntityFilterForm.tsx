@@ -18,7 +18,7 @@ interface Props<FormData extends GenericObjectType> {
     disabled?: boolean;
 }
 
-const getBaseUiSchema = (id) => ({
+const getBaseUiSchema = (id: string) => ({
     "ui:submitButtonOptions": {
         props: {
             variant: "outlined",
@@ -54,7 +54,7 @@ function EntityFilterForm<FormData extends GenericObjectType>(props: Props<FormD
 
     const baseUiSchema = useMemo(() => getBaseUiSchema(variant), [variant]);
 
-    const handleChange = (event) => {
+    const handleChange = (event: { formData: FormData }) => {
         onChange(event.formData);
     };
 
@@ -65,7 +65,7 @@ function EntityFilterForm<FormData extends GenericObjectType>(props: Props<FormD
             formData={value}
             id={variant}
             onChange={handleChange}
-            onSubmit={(e) => onSubmit && onSubmit(e.formData)}
+            onSubmit={(e: { formData: FormData }) => onSubmit && onSubmit(e.formData)}
             widgets={{ SelectWidget: CustomSelectWidget }}
             templates={{ ObjectFieldTemplate, TitleFieldTemplate: TitleField }}
             disabled={disabled}

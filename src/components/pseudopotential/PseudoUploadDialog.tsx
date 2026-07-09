@@ -71,31 +71,31 @@ function PseudoUploadDialog({
     const [file, setFile] = useState<File | null>(null);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const getFunctionalSelectedValues = (currentApproximation) => {
-        return getDFTFunctionalsByApproximation(currentApproximation);
+    const getFunctionalSelectedValues = (currentApproximation: string) => {
+        return getDFTFunctionalsByApproximation(currentApproximation as Parameters<typeof getDFTFunctionalsByApproximation>[0]);
     };
 
-    const getAllowedValues = (field) =>
-        PseudoSelectSchema.schema(field).type.definitions[0].allowedValues;
+    const getAllowedValues = (field: string) =>
+        PseudoSelectSchema.schema(field).type.definitions[0]!.allowedValues;
 
     useEffect(() => {
-        setApproximation(getAllowedValues("approximation")[0]);
-        setFunctional(getFunctionalSelectedValues(getAllowedValues("approximation")[0])[0]);
-        setType(getAllowedValues("type")[0]);
-        setApplication(getAllowedValues("app")[0]);
+        setApproximation(getAllowedValues("approximation")![0]);
+        setFunctional(getFunctionalSelectedValues(getAllowedValues("approximation")?.[0] ?? "")?.[0] ?? "");
+        setType(getAllowedValues("type")![0] as FileDataItem["type"]);
+        setApplication(getAllowedValues("app")![0]);
         setFile(null);
     }, []);
 
-    const getSelectItems = (items): ParsedElement[] => {
+    const getSelectItems = (items: string[]): ParsedElement[] => {
         if (!items) return [];
-        return items.map((item) => ({
+        return items.map((item: string) => ({
             id: item,
             name: item,
             value: item,
         }));
     };
 
-    const handleFileUpload = (event) => {
+    const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (!event.target.files) return;
 
         const fileFromInput: File = event.target.files[0];
@@ -152,16 +152,16 @@ function PseudoUploadDialog({
                 id="select-element"
                 label="Element"
                 value={element}
-                onChange={(e) => setElement(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setElement(e.target.value)}
                 items={getSelectItems(isElementSelectEnabled ? allElements : elements)}
             />
             <SelectComponent
                 id="select-approximation"
                 label="Approximation"
                 value={approximation}
-                onChange={(e) => {
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setApproximation(e.target.value);
-                    setFunctional(getFunctionalSelectedValues(e.target.value)[0]);
+                    setFunctional(getFunctionalSelectedValues(e.target.value)?.[0] ?? "");
                 }}
                 items={getSelectItems(getAllowedValues("approximation"))}
             />
@@ -169,17 +169,17 @@ function PseudoUploadDialog({
                 id="select-functional"
                 label="Functional"
                 value={functional}
-                onChange={(e) => {
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setFunctional(e.target.value);
                 }}
-                items={getSelectItems(getFunctionalSelectedValues(approximation))}
+                items={getSelectItems(getFunctionalSelectedValues(approximation) ?? [])}
             />
             <SelectComponent
                 id="select-type"
                 label="Type"
                 value={type}
-                onChange={(e) => {
-                    setType(e.target.value);
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    setType(e.target.value as FileDataItem["type"]);
                 }}
                 items={getSelectItems(getAllowedValues("type"))}
             />
@@ -187,7 +187,7 @@ function PseudoUploadDialog({
                 id="select-application"
                 label="application"
                 value={application}
-                onChange={(e) => {
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setApplication(e.target.value);
                 }}
                 items={getSelectItems(getAllowedValues("app"))}
