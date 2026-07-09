@@ -23,6 +23,7 @@ import { Model, Method, PseudoPanel, PseudopotentialList } from "../exports";
 import type { PseudoData } from "../components/pseudopotential/PseudoList";
 import type { PseudoItem } from "../components/pseudopotential/PseudoAutocomplete";
 import ThemeProvider from "@exabyte-io/cove.js/dist/theme/provider/ThemeProvider";
+// NOTE: Remove pseudopotentials.json in the future and migrate to use standata schemas/data instead.
 import pseudoDataset from "./data/pseudopotentials.json";
 
 // Register all ESSE schemas
