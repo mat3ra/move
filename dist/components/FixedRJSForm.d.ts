@@ -30,7 +30,7 @@ declare namespace FixedRJSForm {
         export { onError_1 as onError };
         export function onSubmit_1(): void;
         export { onSubmit_1 as onSubmit };
-        let onChange_1: any;
+        let onChange_1: null;
         export { onChange_1 as onChange };
         let uiSchema_1: {};
         export { uiSchema_1 as uiSchema };
@@ -42,13 +42,13 @@ declare namespace FixedRJSForm {
         export { customValidate_1 as customValidate };
         let liveValidate_1: boolean;
         export { liveValidate_1 as liveValidate };
-        let widgets_1: any;
+        let widgets_1: null;
         export { widgets_1 as widgets };
-        let templates_1: any;
+        let templates_1: null;
         export { templates_1 as templates };
         let disabled_1: boolean;
         export { disabled_1 as disabled };
-        let children_1: any;
+        let children_1: null;
         export { children_1 as children };
     }
 }

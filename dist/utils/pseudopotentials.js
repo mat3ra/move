@@ -1,4 +1,4 @@
-import { default as PseudopotentialMetaPropertyClass } from "@mat3ra/prode/dist/js/meta_properties/PseudopotentialMetaProperty";
+import { PseudopotentialMetaProperty as PseudopotentialMetaPropertyClass, } from "@mat3ra/prode";
 /**
  * Computes the filtered and sorted list of pseudopotentials for each unique element,
  * ready to be passed directly to `PseudopotentialList` as `pseudoData`.

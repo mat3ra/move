@@ -12,6 +12,18 @@
     "homepage": "https://github.com/mat3ra/move",
     "main": "dist/exports.js",
     "types": "dist/exports.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/exports.d.ts",
+            "import": "./dist/exports.js",
+            "default": "./dist/exports.js"
+        },
+        "./pseudo": {
+            "types": "./dist/pseudo.d.ts",
+            "import": "./dist/pseudo.js",
+            "default": "./dist/pseudo.js"
+        }
+    },
     "files": [
         "/dist",
         "/src",
@@ -36,7 +48,8 @@
         "@mat3ra/prode": "*",
         "@mat3ra/wode": "*",
         "react": "^17.0.0",
-        "react-dom": "^17.0.0"
+        "react-dom": "^17.0.0",
+        "simpl-schema": "git+https://github.com/Exabyte-io/simpl-schema.git#355fbea163da5be1946dc66c7ed951f53878d15c"
     },
     "license": "Apache-2.0",
     "devDependencies": {

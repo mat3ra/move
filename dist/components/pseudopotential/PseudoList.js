@@ -24,6 +24,6 @@ function ElementAvatar({ element }) {
 export function PseudopotentialList({ pseudoData, isActive, onChange, onButtonClick, }) {
     return (_jsx(Box, { className: "PseudopotentialList", children: pseudoData.map((ppDoc) => {
             const { value: element, selectedPseudo, dataSource: availablePseudos } = ppDoc;
-            return (_jsxs(Stack, { direction: "row", width: "100%", spacing: 1, "data-tid": element, alignItems: "center", children: [_jsx(ElementAvatar, { element: element }), _jsx(PseudoAutocomplete, { className: "pseudos-input", disabled: !isActive, options: availablePseudos, onChange: onChange, value: selectedPseudo }), _jsx(Button, { "data-tid": "pseudo-upload", onClick: onButtonClick, variant: "outlined", color: "secondary", startIcon: _jsx(IconByName, { name: "gateway.upload" }), children: "Upload" })] }, element));
+            return (_jsxs(Stack, { direction: "row", width: "100%", spacing: 1, "data-tid": element, alignItems: "center", children: [_jsx(ElementAvatar, { element: element !== null && element !== void 0 ? element : "" }), _jsx(PseudoAutocomplete, { className: "pseudos-input", disabled: !isActive, options: availablePseudos, onChange: onChange, value: selectedPseudo }), _jsx(Button, { "data-tid": "pseudo-upload", onClick: onButtonClick, variant: "outlined", color: "secondary", startIcon: _jsx(IconByName, { name: "gateway.upload" }), children: "Upload" })] }, element));
         }) }));
 }
