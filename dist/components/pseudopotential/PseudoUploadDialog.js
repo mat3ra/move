@@ -17,6 +17,7 @@ const allElements = Object.values(PERIODIC_TABLE)
     .map((el) => el.symbol)
     .sort();
 function PseudoUploadDialog({ id = "pseudo-upload-dialog", title = "Upload Pseudopotential File", onClose, onSubmit, isSubmitButtonProcessing = false, elements = [], isElementSelectEnabled = false, }) {
+    var _a;
     const [element, setElement] = useState(elements[0] || "");
     const [approximation, setApproximation] = useState("");
     const [functional, setFunctional] = useState("");
@@ -29,8 +30,9 @@ function PseudoUploadDialog({ id = "pseudo-upload-dialog", title = "Upload Pseud
     };
     const getAllowedValues = (field) => PseudoSelectSchema.schema(field).type.definitions[0].allowedValues;
     useEffect(() => {
+        var _a, _b, _c, _d;
         setApproximation(getAllowedValues("approximation")[0]);
-        setFunctional(getFunctionalSelectedValues(getAllowedValues("approximation")[0])[0]);
+        setFunctional((_d = (_c = getFunctionalSelectedValues((_b = (_a = getAllowedValues("approximation")) === null || _a === void 0 ? void 0 : _a[0]) !== null && _b !== void 0 ? _b : "")) === null || _c === void 0 ? void 0 : _c[0]) !== null && _d !== void 0 ? _d : "");
         setType(getAllowedValues("type")[0]);
         setApplication(getAllowedValues("app")[0]);
         setFile(null);
@@ -81,11 +83,12 @@ function PseudoUploadDialog({ id = "pseudo-upload-dialog", title = "Upload Pseud
         }
     };
     return (_jsxs(Dialog, { open: true, id: id, title: title, onClose: onClose, onSubmit: handleSubmit, submitButtonText: "Save", isSubmitButtonDisabled: !file, isSubmitButtonProcessing: isSubmitButtonProcessing, scroll: "body", maxWidth: "sm", children: [_jsx(SelectComponent, { id: "select-element", label: "Element", value: element, onChange: (e) => setElement(e.target.value), items: getSelectItems(isElementSelectEnabled ? allElements : elements) }), _jsx(SelectComponent, { id: "select-approximation", label: "Approximation", value: approximation, onChange: (e) => {
+                    var _a, _b;
                     setApproximation(e.target.value);
-                    setFunctional(getFunctionalSelectedValues(e.target.value)[0]);
+                    setFunctional((_b = (_a = getFunctionalSelectedValues(e.target.value)) === null || _a === void 0 ? void 0 : _a[0]) !== null && _b !== void 0 ? _b : "");
                 }, items: getSelectItems(getAllowedValues("approximation")) }), _jsx(SelectComponent, { id: "select-functional", label: "Functional", value: functional, onChange: (e) => {
                     setFunctional(e.target.value);
-                }, items: getSelectItems(getFunctionalSelectedValues(approximation)) }), _jsx(SelectComponent, { id: "select-type", label: "Type", value: type, onChange: (e) => {
+                }, items: getSelectItems((_a = getFunctionalSelectedValues(approximation)) !== null && _a !== void 0 ? _a : []) }), _jsx(SelectComponent, { id: "select-type", label: "Type", value: type, onChange: (e) => {
                     setType(e.target.value);
                 }, items: getSelectItems(getAllowedValues("type")) }), _jsx(SelectComponent, { id: "select-application", label: "application", value: application, onChange: (e) => {
                     setApplication(e.target.value);

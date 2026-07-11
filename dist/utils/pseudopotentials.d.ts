@@ -1,4 +1,4 @@
-import type { MetaPropertyHolderMixin } from "@mat3ra/prode/dist/js/holders/mixins/MetaPropertyHolderMixin";
+import { type MetaPropertyHolderMixin } from "@mat3ra/prode";
 import type { Subworkflow } from "@mat3ra/wode";
 import type { PseudoData } from "../components/pseudopotential/PseudoList";
 /**

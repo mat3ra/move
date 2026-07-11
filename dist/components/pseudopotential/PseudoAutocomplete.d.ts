@@ -12,5 +12,5 @@ interface PseudoAutocompleteProps {
     value: PseudoItem;
     className?: string;
 }
-export default function PseudoAutocomplete({ options, onChange, disabled, value, className, }: PseudoAutocompleteProps): React.JSX.Element;
+export default function PseudoAutocomplete({ options, onChange, disabled, value, className, }: PseudoAutocompleteProps): React.JSX.Element | null;
 export {};
