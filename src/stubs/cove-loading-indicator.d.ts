@@ -1,6 +1,6 @@
 /**
  * Stub type declaration for the cove.js LoadingIndicator component.
- * The actual component is available in newer versions of @mat3ra/cove.js;
+ * The actual component is available in newer versions of @mat3ra/cove;
  * this stub allows compilation against the currently installed version.
  */
 import React from "react";

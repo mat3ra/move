@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import IconByName from "@mat3ra/cove.js/dist/mui/components/icon/IconByName";
+import IconByName from "@mat3ra/cove/dist/mui/components/icon/IconByName";
 import type { PseudopotentialMetaProperty } from "@mat3ra/prode";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
