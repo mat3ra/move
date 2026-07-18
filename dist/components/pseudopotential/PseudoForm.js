@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { LoadingIndicator } from "@exabyte-io/cove.js/dist/mui-composed/components/loading/LoadingIndicator";
+import { LoadingIndicator } from "@mat3ra/cove/dist/mui-composed/components/loading/LoadingIndicator";
 import Stack from "@mui/material/Stack";
 import setClass from "classnames";
 import { useCallback, useState } from "react";

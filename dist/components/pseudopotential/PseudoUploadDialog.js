@@ -1,8 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import UploadButton from "@exabyte-io/cove.js/dist/mui/components/button/UploadButton";
-import Dialog from "@exabyte-io/cove.js/dist/mui/components/dialog/Dialog";
-import Select from "@exabyte-io/cove.js/dist/mui/components/select";
+import UploadButton from "@mat3ra/cove/dist/mui/components/button/UploadButton";
+import Dialog from "@mat3ra/cove/dist/mui/components/dialog/Dialog";
+import Select from "@mat3ra/cove/dist/mui/components/select";
 const SelectComponent = Select;
 import { PERIODIC_TABLE } from "@exabyte-io/periodic-table.js";
 import { tree } from "@mat3ra/mode";

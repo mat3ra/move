@@ -1,10 +1,10 @@
-import Accordion from "@exabyte-io/cove.js/dist/mui/components/accordion/Accordion";
+import Accordion from "@mat3ra/cove/dist/mui/components/accordion/Accordion";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import React from "react";
 
-import InfoPopoverWithDocumentation from "@exabyte-io/cove.js/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation";
+import InfoPopoverWithDocumentation from "@mat3ra/cove/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation";
 
 export interface MetaProperty {
     owner?: { slug: string };

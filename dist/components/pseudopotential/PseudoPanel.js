@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import Accordion from "@exabyte-io/cove.js/dist/mui/components/accordion/Accordion";
+import Accordion from "@mat3ra/cove/dist/mui/components/accordion/Accordion";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import InfoPopoverWithDocumentation from "@exabyte-io/cove.js/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation";
+import InfoPopoverWithDocumentation from "@mat3ra/cove/dist/mui/components/popover/info-popover/InfoPopoverWithDocumentation";
 export function PseudoPanel({ children }) {
     return (_jsx(Accordion, { isExpanded: true, 
         // @ts-ignore TODO: fix Accordion types
