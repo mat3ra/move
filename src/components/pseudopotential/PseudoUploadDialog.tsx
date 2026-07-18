@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import UploadButton from "@exabyte-io/cove.js/dist/mui/components/button/UploadButton";
-import Dialog from "@exabyte-io/cove.js/dist/mui/components/dialog/Dialog";
-import Select from "@exabyte-io/cove.js/dist/mui/components/select";
+import UploadButton from "@mat3ra/cove.js/dist/mui/components/button/UploadButton";
+import Dialog from "@mat3ra/cove.js/dist/mui/components/dialog/Dialog";
+import Select from "@mat3ra/cove.js/dist/mui/components/select";
 const SelectComponent = Select as any;
 import { PERIODIC_TABLE } from "@exabyte-io/periodic-table.js";
 import type { FileDataItem } from "@mat3ra/esse/dist/js/types";

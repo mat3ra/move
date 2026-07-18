@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import ObjectFieldTemplate from "@exabyte-io/cove.js/dist/other/rjsf/templates/CustomObjectFieldTemplate";
+import ObjectFieldTemplate from "@mat3ra/cove.js/dist/other/rjsf/templates/CustomObjectFieldTemplate";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Widgets } from "@rjsf/mui";
