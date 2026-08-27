@@ -1,4 +1,5 @@
 import {
+    type AnyModelSchema,
     type ApplicationSchema,
     CategorizedModel,
     ModelParameters,
@@ -71,7 +72,7 @@ function Model({ model, models, onUpdate, editable = true, application, id }: Pr
     const filteredMethodList = filterMethodsByModel({
         methodList: categorizedMethodList,
         model: ModelConversionHandler.convertToCategorized(
-            model?.toJSON(),
+            model?.toJSON() as AnyModelSchema | undefined,
             categorizedModelList,
         ) as ModelConfig | undefined,
     });
@@ -118,7 +119,7 @@ function Model({ model, models, onUpdate, editable = true, application, id }: Pr
                 onChange={onModelUpdate}
                 disabled={!editable}
                 selected={ModelConversionHandler.convertToCategorized(
-                    model?.toJSON(),
+                    model?.toJSON() as AnyModelSchema | undefined,
                     categorizedModelList,
                 )}
             />

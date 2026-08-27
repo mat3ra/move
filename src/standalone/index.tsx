@@ -4,7 +4,7 @@ import type { JSONSchema7 } from "json-schema";
 import { ModelFactory, MethodFactory } from "@mat3ra/mode";
 import { ModelStandata, MethodStandata } from "@mat3ra/standata";
 import { ApplicationRegistry } from "@mat3ra/standata";
-import { ApplicationDriver } from "@mat3ra/standata/dist/js/ApplicationDriver";
+import StandataDriver from "@mat3ra/standata/dist/js/StandataDriver";
 import { MaterialStandata } from "@mat3ra/standata/dist/js/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -30,7 +30,7 @@ import pseudoDataset from "./data/pseudopotentials.json";
 JSONSchemasInterface.setSchemas(esseSchemas as unknown as JSONSchema7[]);
 
 // Bootstrap standata
-const applicationDriver = new ApplicationDriver();
+const applicationDriver = new StandataDriver();
 ApplicationRegistry.setDriver(applicationDriver);
 const registry = new ApplicationRegistry();
 
