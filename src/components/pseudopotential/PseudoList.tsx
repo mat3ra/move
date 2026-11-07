@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import IconByName from "@mat3ra/cove/dist/mui/components/icon/IconByName";
+import { ChemicalElement } from "@exabyte-io/periodic-table.js";
 import type { PseudopotentialMetaProperty } from "@mat3ra/prode";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -8,7 +9,6 @@ import React from "react";
 
 import PseudoAutocomplete, { type PseudoItem } from "./PseudoAutocomplete";
 
-// Standalone stub — ElementAvatar shows the element symbol in a small colored chip.
 function ElementAvatar({ element }: { element: string }) {
     return (
         <span
@@ -19,7 +19,7 @@ function ElementAvatar({ element }: { element: string }) {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                background: "#7c4dff",
+                background: `radial-gradient(circle at 5px 6px, ${ChemicalElement.getColorBySymbol(element)} 25%, #333)`,
                 color: "#fff",
                 fontSize: 11,
                 fontWeight: 700,
