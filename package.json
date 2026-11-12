@@ -49,8 +49,7 @@
         "@mat3ra/prode": "*",
         "@mat3ra/wode": "*",
         "react": "^17.0.0",
-        "react-dom": "^17.0.0",
-        "simpl-schema": "git+https://github.com/Exabyte-io/simpl-schema.git#355fbea163da5be1946dc66c7ed951f53878d15c"
+        "react-dom": "^17.0.0"
     },
     "license": "Apache-2.0",
     "devDependencies": {
@@ -91,7 +90,6 @@
         "react": "^17.0.0",
         "react-dom": "^17.0.0",
         "reactflow": "^11.7.2",
-        "simpl-schema": "git+https://github.com/Exabyte-io/simpl-schema.git#355fbea163da5be1946dc66c7ed951f53878d15c",
         "@types/lodash": "^4.14.202"
     }
 }
