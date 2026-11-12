@@ -10,12 +10,21 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import React, { useEffect, useState } from "react";
 
-import { PseudoSelectSchema } from "../../schemas/pseudo_select";
-
 // In standalone mode, appSettingsClient is not available. Provide a safe default.
 const appSettingsClient = () => ({ fileSizeLimit: 50 * 1024 * 1024 }); // 50 MB default
 
-const { getDFTFunctionalsByApproximation } = tree;
+const {
+    getDFTFunctionalsByApproximation,
+    getDFTFunctionalsFromTree,
+    getPseudopotentialTypesFromTree,
+} = tree;
+
+/// The choices of each select, first one selected when the dialog opens.
+const ALLOWED_VALUES = {
+    approximation: getDFTFunctionalsFromTree(),
+    type: getPseudopotentialTypesFromTree(),
+    app: ["espresso", "vasp"],
+};
 
 interface PeriodicElement {
     symbol: string;
@@ -75,14 +84,13 @@ function PseudoUploadDialog({
         return getDFTFunctionalsByApproximation(currentApproximation as Parameters<typeof getDFTFunctionalsByApproximation>[0]);
     };
 
-    const getAllowedValues = (field: string) =>
-        PseudoSelectSchema.schema(field).type.definitions[0]!.allowedValues;
-
     useEffect(() => {
-        setApproximation(getAllowedValues("approximation")![0]);
-        setFunctional(getFunctionalSelectedValues(getAllowedValues("approximation")?.[0] ?? "")?.[0] ?? "");
-        setType(getAllowedValues("type")![0] as FileDataItem["type"]);
-        setApplication(getAllowedValues("app")![0]);
+        setApproximation(ALLOWED_VALUES.approximation[0]);
+        setFunctional(
+            getFunctionalSelectedValues(ALLOWED_VALUES.approximation[0] ?? "")?.[0] ?? "",
+        );
+        setType(ALLOWED_VALUES.type[0] as FileDataItem["type"]);
+        setApplication(ALLOWED_VALUES.app[0]);
         setFile(null);
     }, []);
 
@@ -163,7 +171,7 @@ function PseudoUploadDialog({
                     setApproximation(e.target.value);
                     setFunctional(getFunctionalSelectedValues(e.target.value)?.[0] ?? "");
                 }}
-                items={getSelectItems(getAllowedValues("approximation"))}
+                items={getSelectItems(ALLOWED_VALUES.approximation)}
             />
             <SelectComponent
                 id="select-functional"
@@ -181,7 +189,7 @@ function PseudoUploadDialog({
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setType(e.target.value as FileDataItem["type"]);
                 }}
-                items={getSelectItems(getAllowedValues("type"))}
+                items={getSelectItems(ALLOWED_VALUES.type)}
             />
             <SelectComponent
                 id="select-application"
@@ -190,7 +198,7 @@ function PseudoUploadDialog({
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setApplication(e.target.value);
                 }}
-                items={getSelectItems(getAllowedValues("app"))}
+                items={getSelectItems(ALLOWED_VALUES.app)}
             />
             <Box sx={{ pt: 1 }}>
                 <UploadButton
