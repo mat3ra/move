@@ -49,8 +49,7 @@
         "@mat3ra/prode": "*",
         "@mat3ra/wode": "*",
         "react": "^17.0.0",
-        "react-dom": "^17.0.0",
-        "simpl-schema": "git+https://github.com/Exabyte-io/simpl-schema.git#355fbea163da5be1946dc66c7ed951f53878d15c"
+        "react-dom": "^17.0.0"
     },
     "license": "Apache-2.0",
     "devDependencies": {
@@ -73,8 +72,8 @@
         "@rjsf/utils": "^5.1.0",
         "@rjsf/mui": "^5.1.0",
         "@rjsf/validator-ajv8": "^5.1.0",
-        "@mat3ra/cove": "https://github.com/mat3ra/cove/releases/download/wip-3374a52/cove.tgz",
-        "@mat3ra/wave.js": "https://github.com/mat3ra/wave.js/releases/download/wip-1bd0a38/wave.js.tgz",
+        "@mat3ra/cove": "2026.8.19-4",
+        "@mat3ra/wave.js": "2026.8.19-0",
         "@emotion/babel-plugin": "^11.11.0",
         "@emotion/react": "^11.11.0",
         "@emotion/styled": "^11.11.0",
@@ -91,7 +90,6 @@
         "react": "^17.0.0",
         "react-dom": "^17.0.0",
         "reactflow": "^11.7.2",
-        "simpl-schema": "git+https://github.com/Exabyte-io/simpl-schema.git#355fbea163da5be1946dc66c7ed951f53878d15c",
         "@types/lodash": "^4.14.202"
     }
 }
