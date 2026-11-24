@@ -23,6 +23,7 @@ const {
 const ALLOWED_VALUES = {
     approximation: getDFTFunctionalsFromTree(),
     type: getPseudopotentialTypesFromTree(),
+    // TODO: get the applications from Standata instead of listing them here.
     app: ["espresso", "vasp"],
 };
 
